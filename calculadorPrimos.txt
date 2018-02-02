@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author Mati
+ */
+public class JavaApplication80 {
+    public static Scanner stdin=new Scanner(System.in);
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int i,n,j,t,s;
+        boolean primo;
+        s=0;
+        System.out.print("Write a number: ");
+        n=stdin.nextInt();
+        for(i=1;i<=n;i++){
+            primo = true;
+            for(j=2;j<i;j++){
+                t=i%j;
+                if(t==0){
+                    primo=false;
+                    j = n+1;
+                }
+                
+            }
+            if(primo==true){
+                System.out.println(i);
+            }
+        }
+    }
+    
+}
